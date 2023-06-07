@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es5", 
+    "module": "commonjs",
+    // 严格空检查，建议打开
+    "strictNullChecks": true,
+    "noImplicitAny": true, // 不允许隐含any类型
+    // exnext 最新版的es
+    "lib": ["ESNext", "dom"],
+    "experimentalDecorators": true, // 让ts支持装饰器  
+    "downlevelIteration": true,
+    "strictFunctionTypes": true,
+    "esModuleInterop": true, // 转换es6模块
+    "declaration": true, // 在编译的时候自动生成一份类型声明文件
+    // 找类型声明文件
+    "baseUrl": "./",
+    "paths": { // 映射路径
+      "*":["types/*"]
+    }
+  },
+  // * 匹配任意字符但不包括路径分隔符，**匹配任意字符也包括路径分隔符
+  "include": [// 编译那些目录下的文件
+    // glob 模式（文件匹配模式）
+    "typings/**/*",
+    "src/**/*"
+  ]
+}
